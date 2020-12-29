@@ -15,9 +15,29 @@ class S3CdkUdemyStack(core.Stack):
             self,
             "BucketId",
             bucket_name="mycdkmobs399",
-            versioned=True,
-            encryption=_s3.BucketEncryption.S3_MANAGED
+            versioned=False,
+            encryption=_s3.BucketEncryption.KMS_MANAGED,
+            block_public_access=_s3.BlockPublicAccess.BLOCK_ALL
 
-            
+        )
 
+        mybucket = _s3.Bucket(
+            self,
+            "myBucketId2"
+            )
+
+        # value validation example #################
+        snstopicname="abcdef123"
+
+        if not core.Token.is_unresolved(snstopicname) and len(snstopicname) > 10:
+            raise ValueError ("Maximum value can not exceed 10 characters")
+        
+        print (mybucket.bucket_name)
+        ################################
+        output_1 = core.CfnOutput(
+            self,
+            "myBucket2Output1",
+            value=mybucket.bucket_name,
+            description=f"My first CDK Bucket",
+            export_name="myBucket2Output1"
         )
