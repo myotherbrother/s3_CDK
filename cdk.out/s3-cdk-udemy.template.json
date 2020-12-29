@@ -34,6 +34,12 @@
         "aws:cdk:path": "s3-cdk-udemy/myBucketId2/Resource"
       }
     },
+    "gidAF1DAB4C": {
+      "Type": "AWS::IAM::Group",
+      "Metadata": {
+        "aws:cdk:path": "s3-cdk-udemy/gid/Resource"
+      }
+    },
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
