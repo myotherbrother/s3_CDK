@@ -1,6 +1,8 @@
 
 # Welcome to your CDK Python project!
 
+This is a cdk project which creates a s3 bucket, versions and encrypted with s3 encryption.
+
 This is a blank project for Python development with CDK.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
