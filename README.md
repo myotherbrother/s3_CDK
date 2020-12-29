@@ -1,7 +1,7 @@
 
 # Welcome to your CDK Python project!
 
-This is a cdk project which creates a s3 bucket, versions and encrypted with s3 encryption.
+This is a cdk project which creates a s3 bucket, enables versions, and encrypts bucket using s3 managed encryption.
 
 This is a blank project for Python development with CDK.
 
